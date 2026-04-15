@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF 自动翻译设置</title>
+    <link rel="stylesheet" href="options.css" />
+  </head>
+  <body>
+    <main class="panel">
+      <h1>PDF 自动翻译设置</h1>
+
+      <label class="field">
+        <span>默认源语言</span>
+        <select id="source-language"></select>
+      </label>
+
+      <label class="field">
+        <span>默认目标语言</span>
+        <select id="target-language"></select>
+      </label>
+
+      <label class="checkbox-row">
+        <input id="auto-translate-pdf" type="checkbox" />
+        <span>在 Chrome 中打开 PDF 时自动翻译</span>
+      </label>
+
+      <button id="save-btn" type="button">保存设置</button>
+      <p id="status" class="status"></p>
+
+      <section class="tips">
+        <h2>使用提示</h2>
+        <ul>
+          <li>默认配置为 英语 -> 中文(简体)。</li>
+          <li>如需翻译本地 PDF(`file://`)，请在扩展详情页启用“允许访问文件网址”。</li>
+          <li>插件会识别以 `.pdf` 结尾的 URL 并自动跳转到翻译阅读页。</li>
+        </ul>
+      </section>
+    </main>
+
+    <script src="options.js" type="module"></script>
+  </body>
+</html>

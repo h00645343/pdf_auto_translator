@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF 翻译阅读器</title>
+    <link rel="stylesheet" href="viewer.css" />
+  </head>
+  <body>
+    <header class="toolbar">
+      <div class="left">
+        <h1>PDF 翻译阅读器</h1>
+        <a id="source-link" href="#" target="_blank" rel="noopener noreferrer">打开原始 PDF</a>
+      </div>
+      <div class="controls">
+        <label>
+          源语言
+          <select id="source-language"></select>
+        </label>
+        <label>
+          目标语言
+          <select id="target-language"></select>
+        </label>
+        <button id="retranslate-btn" type="button">重新翻译</button>
+      </div>
+    </header>
+
+    <section class="status-wrap">
+      <div id="status-text">等待加载 PDF...</div>
+      <progress id="progress" max="100" value="0"></progress>
+    </section>
+
+    <main id="pages" class="pages"></main>
+
+    <template id="page-template">
+      <article class="page-card">
+        <h2></h2>
+        <div class="columns">
+          <section>
+            <h3>原文</h3>
+            <p class="source-text"></p>
+          </section>
+          <section>
+            <h3>译文</h3>
+            <p class="translated-text"></p>
+          </section>
+        </div>
+      </article>
+    </template>
+
+    <script type="module" src="viewer.js"></script>
+  </body>
+</html>

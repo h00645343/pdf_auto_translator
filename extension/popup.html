@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PDF 自动翻译</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>PDF 自动翻译</h1>
+      <p id="lang-info" class="muted">读取设置中...</p>
+      <label class="switch-row">
+        <span>打开 PDF 自动翻译</span>
+        <input id="auto-toggle" type="checkbox" />
+      </label>
+      <button id="translate-current" type="button">翻译当前标签页 PDF</button>
+      <button id="open-options" type="button" class="secondary">打开设置</button>
+      <p id="message" class="message"></p>
+    </main>
+    <script src="popup.js" type="module"></script>
+  </body>
+</html>

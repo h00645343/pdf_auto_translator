@@ -1,0 +1,78 @@
+body {
+  margin: 0;
+  background: linear-gradient(135deg, #eef5ff, #f8fcff);
+  font-family: "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #1f2a37;
+}
+
+.panel {
+  max-width: 720px;
+  margin: 36px auto;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(16, 40, 80, 0.12);
+  padding: 28px;
+}
+
+h1 {
+  margin: 0 0 24px;
+}
+
+.field {
+  display: grid;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.field span {
+  font-weight: 600;
+}
+
+select {
+  border: 1px solid #c5d1e5;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 14px;
+}
+
+.checkbox-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-weight: 600;
+}
+
+button {
+  border: none;
+  background: #0b63f7;
+  color: #fff;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.status {
+  min-height: 24px;
+  margin-top: 10px;
+  color: #26406b;
+}
+
+.tips {
+  margin-top: 28px;
+  border-top: 1px solid #e8eef9;
+  padding-top: 18px;
+}
+
+.tips h2 {
+  margin-top: 0;
+  font-size: 18px;
+}
+
+.tips ul {
+  margin: 0;
+  padding-left: 18px;
+  color: #516581;
+}

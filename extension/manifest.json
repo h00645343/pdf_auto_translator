@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "PDF Auto Translator",
+  "version": "1.0.0",
+  "description": "Open PDF in Chrome and auto-translate. Default: English to Chinese.",
+  "permissions": ["storage", "tabs", "webNavigation"],
+  "host_permissions": [
+    "http://*/*",
+    "https://*/*",
+    "file:///*",
+    "https://translate.googleapis.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "action": {
+    "default_title": "PDF 自动翻译",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html"
+}
