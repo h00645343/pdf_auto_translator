@@ -1,0 +1,17 @@
+{
+  "name": "pdf_translator",
+  "version": "1.0.0",
+  "description": "Chrome extension to auto translate PDF content (default en -> zh-CN).",
+  "main": "extension/background.js",
+  "scripts": {
+    "sync:pdfjs": "powershell -Command \"New-Item -ItemType Directory -Force -Path extension/lib,extension/lib/cmaps,extension/lib/standard_fonts | Out-Null; Copy-Item node_modules/pdfjs-dist/build/pdf.mjs extension/lib/pdf.mjs -Force; Copy-Item node_modules/pdfjs-dist/build/pdf.worker.min.mjs extension/lib/pdf.worker.min.mjs -Force; Copy-Item node_modules/pdfjs-dist/cmaps/* extension/lib/cmaps -Recurse -Force; Copy-Item node_modules/pdfjs-dist/standard_fonts/* extension/lib/standard_fonts -Recurse -Force\"",
+    "build": "npm run sync:pdfjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "pdfjs-dist": "^5.6.205"
+  }
+}
